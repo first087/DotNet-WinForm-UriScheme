@@ -8,9 +8,15 @@ using System.Text;
 using System.Windows.Forms;
 
 namespace UriSchemeWinApp {
-    public partial class Form1 : Form {
-        public Form1() {
+    public partial class FrmDemo : Form {
+        public FrmDemo() {
             InitializeComponent();
+
+            string[] args = Environment.GetCommandLineArgs();
+
+            foreach (var arg in args) {
+                txtArgs.AppendText(arg + Environment.NewLine);
+            }
         }
     }
 }
